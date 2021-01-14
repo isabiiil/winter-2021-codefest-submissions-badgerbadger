@@ -46,7 +46,7 @@ function App() {
           </Route>
           <Route path="/">
             <Navbar />
-            <Filters />
+            {/* <Filters /> */}
           </Route>
         </Switch>
       </Router>
