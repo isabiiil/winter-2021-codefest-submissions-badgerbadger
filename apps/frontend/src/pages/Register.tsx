@@ -1,4 +1,6 @@
-import { useState } from "react"
+import React, { useState } from "react";
+import './Register.scss';
+import Navbar from './../components/Navbar';
 
 
 
@@ -45,23 +47,18 @@ export default function Login() {
 	}
 
 	return (
-		<form onSubmit={register}>
-			THIS IS THE REGISTER FORM <br></br>
-			<label>Username<input type="text" name="username" id="" onChange={e => setUsername(e.target.value)} /></label>
-			<br></br>
-
-
-			<label>Password<input type="password" name="password" id="" onChange={e => setPassword0(e.target.value)} /></label>
-			<br></br>
-
-			<label>Confirm Password<input type="password" name="password" id="" onChange={e => setPassword1(e.target.value)} /></label>
-			<br></br>
-
-			{message}
-			<br />
-
-			<input type="submit" value="Submit" />
-		</form>
-
+		<>
+			<Navbar />
+			<div className="register">
+				<form onSubmit={register}>
+					<div className="line"><label>Username</label><input type="text" name="username" id="" onChange={e => setUsername(e.target.value)} /></div>
+					<div className="line"><label>Password</label><input type="password" name="password" id="" onChange={e => setPassword0(e.target.value)} /></div>
+					<div className="line"><label>Confirm Password</label><input type="password" name="password" id="" onChange={e => setPassword1(e.target.value)} /></div>
+					{message}
+						<br />
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		</>
 	)
 }
