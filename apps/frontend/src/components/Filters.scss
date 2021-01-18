@@ -5,15 +5,15 @@
     padding: 8px 12px;
     margin: 20px;
     color: #FFFFFF;
-    background-color: #5F3394;
-    border: solid 1px #5F3394;
+    background-color: $light;
+    border: solid 1px $light;
     border-radius: 20px;
     width: 200px;
     cursor: pointer;
   }
 
   .header {
-    background-color: #470056;
+    background-color: $dark;
   }
 
   .filter-row {
@@ -22,11 +22,11 @@
   }
 
   .selected {
-    background-color: #5F3394;
+    background-color: $light;
   }
 
   .deselected {
-    background-color: #E6E6E6;
+    background-color: $grey;
     color: #000000;
   }
 }

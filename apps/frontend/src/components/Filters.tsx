@@ -14,8 +14,6 @@ export default function Filters()
       })
   }, [])
 
-  
-
   return (
     <div className="filters">
     <pre style={{ textAlign: "left" }}>
