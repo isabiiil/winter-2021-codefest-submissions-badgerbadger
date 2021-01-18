@@ -1,25 +1,30 @@
 @import "./../main.scss";
 
 .navbar {
-  background-color: #470056;
-  display: block;
+  background-color: $light;
+  display: flex;
+  justify-content: space-between;
 
   .nav-buttons {
     display: flex;
     justify-content: flex-end;
   }
 
-  p {
-    padding: 8px 12px;
-    margin: 20px;
+  a {
+    text-decoration: none;
     color: #FFFFFF;
-    background-color: #5F3394;
-    border: solid 1px #5F3394;
-    border-radius: 20px;
+    h4 {
+      text-decoration: none;
+      padding: 8px 12px;
+      margin: 20px;
+      background-color: $dark;
+      border: solid 1px $dark;
+      border-radius: 20px;
+    }
   }
 
   .logo {
-    float: left;
     width: 180px;
+    padding: 8px;
   }
 }
