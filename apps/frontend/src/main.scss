@@ -40,8 +40,11 @@ table {
 /* variables */
 $dark: #470056;
 $light: #4E2E91;
+$dark-grey: #C3C3C3;
 $grey: #E6E6E6;
 
-body {
-  font-family: "Proxima Soft", sans-serif;
+body, input {
+	font-family: "Proxima Soft", sans-serif;
+	font-size: 16px;
+	background-color: $grey;
 }
