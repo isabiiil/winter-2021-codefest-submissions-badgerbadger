@@ -4,9 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
-import Navbar from "./components/Navbar";
-import Filters from "./components/Filters";
+import Search from "./pages/Search";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import './App.css';
@@ -33,9 +31,7 @@ function App() {
     //   <Filters />
     // </div>
     <>
-      <a href="/login">Login</a>
-      <a href="/register">Register</a>
-      <a href="/">Home</a>
+      
       <Router>
         <Switch>
           <Route path="/login">
@@ -44,9 +40,13 @@ function App() {
           <Route path="/register">
             <Register />
           </Route>
+          <Route path="/search">
+            <Search />
+          </Route>
           <Route path="/">
-            <Navbar />
-            {/* <Filters /> */}
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/">Home</a>
           </Route>
         </Switch>
       </Router>
