@@ -1,6 +1,6 @@
-import { useState } from "react"
-
-
+import { useState } from "react";
+import "./Login.scss";
+import Navbar from './../components/Navbar'
 
 export default function Login() {
 	const [username, setUsername] = useState<string>("");
@@ -33,20 +33,16 @@ export default function Login() {
 	}
 
 	return (
-		<form onSubmit={login}>
-			THIS IS THE LOGIN FORM <br></br>
-			<label>Username<input type="text" name="username" id="" onChange={e => setUsername(e.target.value)} /></label>
-			<br></br>
-
-
-			<label>Password<input type="password" name="password" id="" onChange={e => setPassword(e.target.value)} /></label>
-			<br></br>
-
-			{token ? username + " IS LOGGED IN" : username + " LOGGED OUT"} 
-			<br/>
-		
-			<input type="submit" value="Submit" />
-		</form>
-
+		<>
+			<Navbar />
+			<form className="login" onSubmit={login}>
+				<div className="line"><label>Username</label><input type="text" name="username" id="" onChange={e => setUsername(e.target.value)} /></div>
+				<div className="line"><label>Password</label><input type="password" name="password" id="" onChange={e => setPassword(e.target.value)} /></div>
+				<br />
+				{/* {token ? username + " IS LOGGED IN" : username + " LOGGED OUT"}  */}
+				<br/>
+				<input type="submit" value="Submit" />
+			</form>
+		</>
 	)
 }
